@@ -7,10 +7,10 @@ async function connect() {
 
   try {
     await mongoose.connect(dbUrl);
-    Logger.info("Conectou ao banco de dados");
+    Logger.info("You're connected to the database");
   } catch (e) {
-    Logger.error("Não foi possível conectar ao banco de dados");
-    Logger.error(`{Erro: ${e}`);
+    Logger.error("You're not connected to the database");
+    Logger.error(`{Error: ${e}`);
     process.exit(1);
   }
 }

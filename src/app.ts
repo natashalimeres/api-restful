@@ -29,5 +29,5 @@ const port = config.get<number>("port");
 
 app.listen(port, async () => {
   await db();
-  Logger.info(`Aplicação funcionando na porta: ${port}`);
+  Logger.info(`Application running on port: ${port}`);
 });
