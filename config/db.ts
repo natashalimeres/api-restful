@@ -1,15 +1,17 @@
 import mongoose from "mongoose";
 import config from "config";
+import Logger from "../config/logger";
 
 async function connect() {
   const dbUrl = config.get<string>("dbUrl");
 
   try {
     await mongoose.connect(dbUrl);
-    console.log("Conectou ao banco de dados");
+    Logger.info("Conectou ao banco de dados");
   } catch (e) {
-    console.log("Não foi possível conectar");
-    console.log(`{Erro: ${e}`);
+    Logger.error("Não foi possível conectar ao banco de dados");
+    Logger.error(`{Erro: ${e}`);
+    process.exit(1);
   }
 }
 
