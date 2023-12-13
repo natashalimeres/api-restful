@@ -16,5 +16,8 @@ export const movieCreateValidation = () => {
         }
         return true;
       }),
+    body("description").isString().withMessage("Description required."),
+    body("director").isString().withMessage("Director's name are required."),
+    body("poster").isString().withMessage("The image needs to be a URL."),
   ];
 };
