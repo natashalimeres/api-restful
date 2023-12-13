@@ -1,3 +1,5 @@
+This project is a RESTful API developed using the MVC architecture pattern, adhering to REST standards for resource creation. The implementation includes essential Node.js modules and frameworks such as Morgan, Winston, Express Validator, Express, and Mongoose. MongoDB serves as the underlying database for persistent data storage.
+
 <h2>Technologies:</h2> 
     <ul>
         <li><strong>Express:</strong> A web application framework for Node.js.</li>
